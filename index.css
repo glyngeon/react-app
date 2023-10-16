@@ -1,3 +1,170 @@
-.heading {
-    color: red;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* header css */
+.header-container {
+    flex-flow: row;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 9px #bbb7b7;
+}
+
+.logo-container {
+    width: 120px;
+}
+.logo {
+    width: 100%;
+    filter: drop-shadow(5px 5px 5px #eaeaea);
+    cursor: pointer;
+}
+.nav-container {
+    margin-right: 2rem;
+}
+.nav-container > ul {
+    display: flex;
+    list-style-type: none;
+}
+.nav-container > ul > li {
+    padding: 1rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+
+
+/* body css */
+.body-container {
+    margin: 1rem 2rem;
+}
+.search-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+.search-container input {
+    border-radius: 5px;
+    height: 50px;
+    padding: 0 10px;
+    border: 1px solid #c8c2c2;
+    width: 60%;
+}
+
+.cards-container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 2rem 0 0 0;
+}
+
+/* card css */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 350px;
+    border-radius: 5px;
+    margin: 1rem;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .card img {
+    border-radius: 5px 5px 0 0;
+    width: 22rem;
+    height: 16rem;
+    object-fit: cover;
+    transform: none;
+    opacity: 1;
+    will-change: transform, opacity;
+    border-radius: inherit;
+    filter: unset;
+    transition: opacity 0.25s ease 0s, transform 0.25s ease 0s;
+  }
+  
+  .card-info {
+    padding: 2px 16px;
+  }
+  .title {
+    display: flex;
+    justify-content: space-between;
+  }
+  .title .name {
+    text-align: left;
+    font-size: 1.1rem;
+    max-width: 80%;
+    color: rgb(28, 28, 28);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .title .rating {
+    color: #fff;
+    background-color: #267e3e;
+    border: 1px solid #267e3e;
+    border-radius: 0.2rem;
+    justify-content: center;
+    align-items: center;
+    min-width: 2.6rem;
+    display: flex;
+  }
+
+  .cuisine-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cuisine-info .cuisine {
+    margin: 0px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(105, 105, 105);
+    max-width: 56%;
+    padding: 0px 0px 0.4rem;
+  }
+
+  .cuisine-info .cost {
+    margin: 0px;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(105, 105, 105);
+    max-width: 30%;
+    padding: 0px 0px 0.4rem;
+  }
+  .delivery-time {
+    margin: 0px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(0.4rem);
+    border-radius: 0.4rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: rgb(54, 54, 54);
+    padding: 0.2rem 0.5rem 0.3rem;
+    text-align: right;
+  }
+.filter-container {
+    margin-top: 1rem;
+}
+.filter-btn {
+    border: 1px solid rgb(207, 207, 207);
+    color: rgb(156, 156, 156);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(54, 54, 54, 0.06) 0px 1px 2px;
+    border-radius: 0.8rem;
+    padding: 0.8rem;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+    font-size: 0.9rem;
+}
+.filter-btn:hover {
+    background-color: rgb(248, 248, 248);
 }
