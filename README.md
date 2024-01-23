@@ -55,3 +55,25 @@
 
 
 # Higher Order Component
+
+
+
+
+# Redux toolkit 
+- Call event - dispatch (action) => call function (reducer) => Manage state => subscribe action/ update ( selector)
+
+- Install npm install @reduxjs/toolkit  and  npm install react-redux
+- Build our store
+- connect our store to our app
+- slice (card slice)
+- dispatch (action)
+- selector
+
+
+
+
+# Testing type ( Developer)
+- npm install --save-dev @testing-library/react
+- unit test - when we test small unit of code 
+- Integration testing - multiple component testing
+- end to end testing (e2e) - whole app flow 

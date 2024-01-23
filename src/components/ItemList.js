@@ -1,10 +1,20 @@
+import { useDispatch } from "react-redux";
 import { MENU_CARD_URL } from "../utils/constant";
+import { addItem } from "../states/cartSlice";
 
 const ItemList = ({ items }) => {
-    console.log(items);
+
+    const disptach = useDispatch();
+
+    const handleAddItem = (item)=> {
+
+      disptach(addItem(item));
+    }
+
+
   return (
-    <div className="">
-      {items?.map((item) => 
+    <div>
+      {items?.map((item, index) => 
         <div
           className="flex justify-between m-1 p-2 mb-3 border-b"
         >
@@ -30,8 +40,8 @@ const ItemList = ({ items }) => {
                 src={MENU_CARD_URL + item?.card?.info?.imageId}
               />
             </div>
-            <div className="absolute rounded-sm border bg-gray-50 text-green-600 text-sm left-[50%] bottom-[8px] translate-x-[-50%] z-10 px-6 py-2">
-              <div className="buttonInner">Add</div>
+            <div className="absolute rounded-sm border bg-gray-50 text-green-600 text-sm left-[50%] bottom-[8px] translate-x-[-50%] z-10 px-6 py-2 cursor-pointer">
+              <div className="buttonInner" onClick={() => handleAddItem(item)}>Add</div>
             </div>
           </div>
         </div>

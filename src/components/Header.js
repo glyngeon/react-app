@@ -3,6 +3,7 @@ import { LOGO_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/userContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [btnButton, setBtnButton] = useState("Logout");
@@ -27,6 +28,9 @@ const Header = () => {
     }
   }
 
+  const cartItems = useSelector((store)=> store.cart.items);
+  console.log(cartItems);
+
   return (
     <div className="sticky top-0 bg-white flex justify-between items-center shadow-lg z-50">
       <div className="w-[90]">
@@ -38,7 +42,7 @@ const Header = () => {
           <li className="p-4 cursor-pointer"><Link to="">Home</Link></li>
           <li className="p-4 cursor-pointer"><Link to="about">About</Link></li>
           <li className="p-4 cursor-pointer"><Link to="contact">Contact Us</Link></li>
-          <li className="p-4 cursor-pointer">Cart</li>
+          <li className="p-4 cursor-pointer font-semibold"><Link to="cart">Cart {cartItems.length} items</Link></li>
           <li className="p-4 cursor-pointer hover:bg-gray-50"
             onClick={logInToggle}
           >
